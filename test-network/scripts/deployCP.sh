@@ -14,7 +14,7 @@ VERBOSE="$6"
 FABRIC_CFG_PATH=$PWD/../config/
 
 	CC_RUNTIME_LANGUAGE=node # chaincode runtime language is node.js
-	CC_SRC_PATH="../chaincode/javascript/"
+	CC_SRC_PATH="../chaincode/"
 
 
 # import utils
