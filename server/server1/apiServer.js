@@ -15,9 +15,9 @@ const { Gateway, Wallets } = require('fabric-network');
 const path = require('path');
 const fs = require('fs');
 const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'org1.example.com', 'connection-org1.json');
-const accRouter = 'router1';
-const smartContract = 'bsbri';
-const opChanel = 'mychanel';
+const accRouter = 'router1'; //router id
+const smartCon = 'bsbri'; //smart contract to use
+const opChanel = 'mychannel'; //channel to use
 
 app.post('/api/queryAllPref', async function (req, res) {
     try {
@@ -28,7 +28,7 @@ app.post('/api/queryAllPref', async function (req, res) {
         const wallet = await Wallets.newFileSystemWallet(walletPath);
         console.log(`Wallet path: ${walletPath}`);
 
-        // Check to see if we've already enrolled the user.
+        // Check to see if we've already enrolled the router.
         const identity = await wallet.get(accRouter);
         if (!identity) {
             console.log('An identity for the  "accRouter" does not exist in the wallet');
@@ -44,7 +44,7 @@ app.post('/api/queryAllPref', async function (req, res) {
         const network = await gateway.getNetwork(opChanel);
 
         // Get the contract from the network.
-        const contract = network.getContract(smartContract);
+        const contract = network.getContract(smartCon);
 
         // Evaluate the specified transaction.
         // queryAllPrefix transaction - requires arguments start key and end key
@@ -63,9 +63,7 @@ app.post('/api/queryAllPref', async function (req, res) {
 //use to handle single prefix request
 app.post('/api/querypref/', async function (req, res) {
     try {
-
-        const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
-        
+        const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));      
         // Create a new file system based wallet for managing identities.
         const walletPath = path.join(process.cwd(), 'wallet');
         const wallet = await Wallets.newFileSystemWallet(walletPath);
@@ -87,7 +85,7 @@ app.post('/api/querypref/', async function (req, res) {
         const network = await gateway.getNetwork(opChanel);
 
         // Get the contract from the network.
-        const contract = network.getContract(smartContract);
+        const contract = network.getContract(smartCon);
 
         // Evaluate the specified transaction.
         // query transaction - requires 1 argument, ex: ('querybKey', '192.168.3.6/24')
@@ -115,9 +113,7 @@ app.post('/api/querypref/', async function (req, res) {
 
 app.post('/api/addpref/', async function (req, res) {
     try {
-
         let ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
-
         // Create a new file system based wallet for managing identities.
         const walletPath = path.join(process.cwd(), 'wallet');
         const wallet = await Wallets.newFileSystemWallet(walletPath);
@@ -126,7 +122,7 @@ app.post('/api/addpref/', async function (req, res) {
         // Check to see if we've already enrolled the user.
         const identity = await wallet.get(accRouter);
         if (!identity) {
-            console.log('An identity for the user "accRouter" does not exist in the wallet');
+            console.log('An identity for the router does not exist in the wallet');
             console.log('Run the registerRouter.js application before retrying');
             return;
         }
@@ -139,14 +135,14 @@ app.post('/api/addpref/', async function (req, res) {
         const network = await gateway.getNetwork(opChanel);
 
         // Get the contract from the network.
-        const contract = network.getContract(smartContract);
+        const contract = network.getContract(smartCon);
 
         // Submit the specified transaction.
         // createPref transaction - requires 4 argument,
         //await contract.submitTransaction('createPref', req.body.prefNumber, req.body.ip_prefix, req.body.prefix_length, req.body.company, req.body.ASN);
-        await contract.submitTransaction('createbsbri', req.body.ip_prefix, req.body.ip_prefix, req.body.ASN, req.body.exp_stat);
-        resStatus=(req.body,' has been submitted');
-        res.status(200).json(resStatus.toString());
+        const resStatus = await contract.submitTransaction('createbsbri', req.body.ip_prefix, req.body.ip_prefix, req.body.ASN, req.body.exp_stat);
+        console.log(resStatus.toString());
+        res.status(resStatus.toString());
 
         // Disconnect from the gateway.
         await gateway.disconnect();
@@ -155,6 +151,5 @@ app.post('/api/addpref/', async function (req, res) {
         console.error(`Failed to submit transaction: ${error}`);
     }
 })
-
 
 app.listen(8091);

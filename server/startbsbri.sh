@@ -26,23 +26,18 @@ cat <<EOF
 
 Total setup execution time : $(($(date +%s) - starttime)) secs ...
 
-Next, use the FabCar applications to interact with the deployed FabCar contract.
-The FabCar applications are available in multiple programming languages.
-Follow the instructions for the programming language of your choice:
 
-JavaScript:
-
-  Start by changing into the "javascript" directory:
-    cd javascript
+  Start by changing into the "Server1" directory:
+    cd server1
 
   Next, install all required packages:
     npm install
 
-  Then run the following applications to enroll the admin user, and register a new user
-  called appUser which will be used by the other applications to interact with the deployed
-  FabCar contract:
+  Then run the following applications to enroll the admin user, and register a new router
+  called router1 which will be used by the other applications to interact with the deployed
+  bsbri contract:
     node enrollAdmin
-    node registerUser
+    node registerRouter
 
   You can run the invoke application as follows. By default, the invoke application will
   create a new car, but you can update the application to submit other transactions:

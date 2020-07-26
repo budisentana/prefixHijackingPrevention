@@ -42,6 +42,7 @@ class bsbri extends Contract {
             await ctx.stub.putState(prefKey, Buffer.from(JSON.stringify(pref)));
             console.info('============= END : Create IP Prefix ===========');
             return('valid');
+            
         }
         else{            
             const changePrefix = JSON.parse(checkData.toString())
