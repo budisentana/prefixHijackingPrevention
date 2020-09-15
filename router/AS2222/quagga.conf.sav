@@ -1,0 +1,27 @@
+!
+! Zebra configuration saved from vty
+!   2020/06/24 05:42:45
+!
+hostname QuaggaRouter6
+password test
+log file /etc/quagga/log
+log stdout informational
+!
+bgp config-type cisco
+!
+router bgp 6666
+ no synchronization
+ bgp router-id 192.9.6.6
+ network 6.6.6.0 mask 255.255.255.0
+ network 66.6.6.0 mask 255.255.255.0
+ neighbor 192.9.5.5 remote-as 2345
+ neighbor 192.9.5.5 description Quagga Router 5
+ no auto-summary
+!
+ address-family ipv6
+ exit-address-family
+ exit
+!
+dump bgp updates /etc/quagga/bgp.routes 60
+line vty
+!

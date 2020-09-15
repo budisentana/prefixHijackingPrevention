@@ -1,0 +1,19 @@
+!
+! Zebra configuration saved from vty
+!   2020/09/14 22:37:01
+!
+hostname router3
+password zebra
+log stdout
+!
+router bgp 3333
+ bgp router-id 192.9.3.3
+ neighbor 192.9.4.4 remote-as 4444
+!
+ address-family ipv6
+ exit-address-family
+ exit
+!
+line vty
+ no login
+!

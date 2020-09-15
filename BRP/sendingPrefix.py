@@ -27,56 +27,35 @@ def sendPrefixRequest(pref,stat):
     # response = requests.post(url=url_set,headers=headers,data=json.dumps(payload))
     # print(response)
 
-def file_compare():
+def compare_roa(buffer_roa):
     try:      
-        print(dirname+'/buffer_roa.txt')
-        buffer_file = dirname+'/buffer_roa.txt'
         local_file = dirname+'/local_roa.txt'      
+        buff=[]
+        loc =[]
+        for x in buffer_roa:
+            buff.append(x.rstrip("\n"))
+        # print('this is buff'+str(buff))
 
-        with open (buffer_file,"r") as buff:
-            with open (local_file,"r") as loc:
-                diff = list(set(loc).difference(buff))           
+        with open (local_file,"r") as local:
+            for y in local:
+                loc.append(y.rstrip("\n"))
+
+        diff = set(loc).difference(buff)           
+        # print('this is different'+str(diff))
         for line in diff:
             prefix = line.rstrip("\n")
             sendPrefixRequest(prefix,'0')
 
-        with open (buffer_file,"r") as buff:
-            with open (local_file,"r") as loc:
-                diff = list(set(buff).difference(loc))           
+        diff = set(buff).difference(loc)           
+        # print('this is second different'+str(diff))
         for line in diff:
             prefix = line.rstrip("\n")
             sendPrefixRequest(prefix,'1')
 
-
-        # getting the line size        
-        # bf = open(buffer_file,"r")
-        # lc = open(local_file,"r")
-        # size_buf = sum([1 for i in bf.readlines() if i.strip()])
-        # size_loc = sum([1 for i in lc.readlines() if i.strip()])
-
-        # compare and find the index file
-        # if size_buf <= size_loc:
-        #     # if buffer size smaller than local size then withdraw prefix
-        #     with open (buffer_file,"r") as buff:
-        #         with open (local_file,"r") as loc:
-        #             diff = list(set(loc).difference(buff))           
-        #     for line in diff:
-        #         prefix = line.rstrip("\n")
-        #         sendPrefixRequest(prefix,'0')
-        # else:
-        #     # if buffer size bigger than local size than advert prefix
-        #     with open (buffer_file,"r") as buff:
-        #         with open (local_file,"r") as loc:
-        #             diff = list(set(buff).difference(loc))           
-        #     for line in diff:
-        #         prefix = line.rstrip("\n")
-        #         sendPrefixRequest(prefix,'1')
-        
         # update the local table
         temp_loc = open(local_file,"w")
-        with open(buffer_file,"r") as buff :
-            for line in buff:
-                temp_loc.write(line)
+        for line in buffer_roa:
+            temp_loc.write(line+"\n")
 
     except Exception as error:
         print(error)
@@ -86,6 +65,6 @@ global url,asn,router_id
 url = ''
 asn = ''
 dirname = os.getcwd()
-file_compare()
+# file_compare()
 
         
