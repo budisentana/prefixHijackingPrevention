@@ -1,6 +1,7 @@
 import requests
 import json
 import timeit
+import time
 import os
 import schedule
 from sendingPrefix import compare_roa
@@ -15,21 +16,15 @@ def run_dispatcher():
         for line in myfile:
             # prefix,path = map(str.strip,line.split(';'))
             if ';' in line:
-                prefix,path = map(str.strip,line.split(';'))
-                if path not in ['i']:
-                    word = path.split(" ")
-                    word_length = len(word)
-                    as_origin = word[word_length-2]
+                prefix,hop,path = map(str.strip,line.split(';'))
+                # print(prefix+hop+path)
+                if hop not in ['0.0.0.0'] and prefix:
+                    as_origin = path
                     # print('prefix :'+str(prefix)+ ' is the originate by  : '+str(as_origin))
                     buffer_rov.append(prefix+';'+as_origin)
-                else:
+                elif hop in ['0.0.0.0']:
                     # print(str(prefix)+' is internal prefix')
                     buffer_roa.append(prefix)
-                    # sendPrefixRequest(prefix,asNumber)
-                    # stopTime = timeit.default_timer()
-                    # exeTime = str(stopTime-startTime)
-                    # with open ("verifTime.txt","a") as sendingTime:
-                    #     sendingTime.write(exeTime + '\n')        
     compare_roa(buffer_roa)        
     compare_rov(buffer_rov)
 
@@ -37,3 +32,4 @@ schedule.every().second.do(run_dispatcher)
 
 while True:
     schedule.run_pending()
+    time.sleep(1)

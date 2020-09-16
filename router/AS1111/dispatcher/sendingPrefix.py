@@ -5,30 +5,33 @@ import os
 
 def check_config():
     try:
+        global url,asn
         with open(dirname + "/config.json","r") as json_conf:
             jc = json.load(json_conf)
-            url = jc["url"]
+            url = jc["server"]
             asn = jc["asn"]
-            router_id = jc["router_id"]
     except Exception as error:
         print(error)
 
 def sendPrefixRequest(pref,stat):
     print(pref)
     if stat in ['1']:
-        print('advert')
+        print('advertising Prefix '+str(pref))
     else:
-        print('withdraw')
-    # url_set = url+'/api/addpref'
-    # headers = {'content-type': 'application/json',
-    #     'accept-encoding': 'application/json',
-    #     'charsets': 'utf-8'}
-    # payload = {'ip_prefix':pref,'ASN':asn,'exp_stat':stat}
-    # response = requests.post(url=url_set,headers=headers,data=json.dumps(payload))
-    # print(response)
+        print('withdraw Prefix '+str(pref))
+    url_set = url+'/api/addpref'
+    headers = {'content-type': 'application/json',
+        'accept-encoding': 'application/json',
+        'charsets': 'utf-8'}
+    payload = {'ip_prefix':pref,'ASN':asn,'exp_stat':stat}
+
+    response = requests.post(url=url_set,headers=headers,data=json.dumps(payload))
+    # print(response.status_code)
+    # add response status before write to local table
 
 def compare_roa(buffer_roa):
     try:      
+        check_config()
         local_file = dirname+'/local_roa.txt'      
         buff=[]
         loc =[]
@@ -40,31 +43,30 @@ def compare_roa(buffer_roa):
             for y in local:
                 loc.append(y.rstrip("\n"))
 
-        diff = set(loc).difference(buff)           
-        # print('this is different'+str(diff))
-        for line in diff:
-            prefix = line.rstrip("\n")
-            sendPrefixRequest(prefix,'0')
-
         diff = set(buff).difference(loc)           
-        # print('this is second different'+str(diff))
+        # print('this is second different buffer'+str(diff))
         for line in diff:
             prefix = line.rstrip("\n")
             sendPrefixRequest(prefix,'1')
 
-        # update the local table
+        diff = set(loc).difference(buff)           
+        # print('this is different local'+str(diff))
+        for line in diff:
+            prefix = line.rstrip("\n")
+            sendPrefixRequest(prefix,'0')
+
+        # update the local tabless
         temp_loc = open(local_file,"w")
         for line in buffer_roa:
             temp_loc.write(line+"\n")
+            print(line)
 
     except Exception as error:
         print(error)
     
-global url,asn,router_id
 
 url = ''
 asn = ''
 dirname = os.getcwd()
-# file_compare()
 
         

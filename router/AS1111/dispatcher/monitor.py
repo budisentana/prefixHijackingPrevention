@@ -1,8 +1,14 @@
 import os
 import json
 import re
+import schedule
+import time
 
 dirname = os.getcwd()
+router_ip =''
+bgp_port = ''
+asn = ''
+password = ''
 def check_config():
     try:
         json_conf = dirname + "/config.json"
@@ -26,5 +32,10 @@ def run_monitor():
     os.system (get_prefix + router_ip +bgp_port + password)
     os.system (monitor_sh)
 
+
 check_config()
-run_monitor()
+schedule.every().second.do(run_monitor)
+
+while True:
+    schedule.run_pending()
+    time.sleep(3)

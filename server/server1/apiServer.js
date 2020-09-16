@@ -97,16 +97,16 @@ app.post('/api/querypref/', async function (req, res) {
             console.info('unknown prefix');
         }else{
             if(req.body.ASN===result.ASN){
-                res.status(200);
+                res.status(200).json({result});
                 console.info('valid prefix');
             }
             else{
-                res.status(205);
+                res.status(200).json({result});
                 console.info('invalid prefix');
             }
         }
     } catch (error) {
-        console.error(`Failed to evaluate transaction: ${error}`);
+        console.error(`Failed to evaluate transaction`);
         res.status(500).json({error: error});
     }
 });
@@ -142,13 +142,14 @@ app.post('/api/addpref/', async function (req, res) {
         //await contract.submitTransaction('createPref', req.body.prefNumber, req.body.ip_prefix, req.body.prefix_length, req.body.company, req.body.ASN);
         const resStatus = await contract.submitTransaction('createbsbri', req.body.ip_prefix, req.body.ip_prefix, req.body.ASN, req.body.exp_stat);
         console.log(resStatus.toString());
-        res.status(resStatus.toString());
+        res.status(200).json({resStatus});
 
         // Disconnect from the gateway.
         await gateway.disconnect();
 
     } catch (error) {
-        console.error(`Failed to submit transaction: ${error}`);
+        console.error(`Failed to submit transaction`);
+        res.status(500).json({error})
     }
 })
 
