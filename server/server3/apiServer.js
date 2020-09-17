@@ -15,8 +15,8 @@ const { Gateway, Wallets } = require('fabric-network');
 const path = require('path');
 const fs = require('fs');
 const { json } = require('body-parser');
-const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'org1.example.com', 'connection-org1.json');
-const accRouter = 'router1'; //router id
+const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'org2.example.com', 'connection-org2.json');
+const accRouter = 'router3'; //router id
 const smartCon = 'bsbri'; //smart contract to use
 const opChanel = 'mychannel'; //channel to use
 
@@ -151,4 +151,4 @@ app.post('/api/addpref/', async function (req, res) {
     }
 })
 
-app.listen(8091);
+app.listen(8093);

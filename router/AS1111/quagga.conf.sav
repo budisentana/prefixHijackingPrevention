@@ -1,6 +1,6 @@
 !
 ! Zebra configuration saved from vty
-!   2020/09/16 04:37:22
+!   2020/09/16 06:01:55
 !
 hostname router1
 password test
@@ -12,7 +12,6 @@ bgp config-type cisco
 router bgp 1111
  no synchronization
  bgp router-id 192.9.1.1
- network 1.1.1.0 mask 255.255.255.0
  network 192.9.5.0
  neighbor 192.9.2.2 remote-as 2222
  no auto-summary
