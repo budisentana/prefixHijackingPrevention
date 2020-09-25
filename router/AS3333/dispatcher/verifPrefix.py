@@ -2,6 +2,7 @@ import requests
 import json
 import timeit
 import os
+from pathlib import Path
 
 def check_config():
     try:
@@ -51,10 +52,14 @@ def compare_rov(buffer_rov):
         # print('this is second different'+str(diff))
         for line in diff:
             prefix,hop,path = map(str.strip,line.split(';'))
+            t_appear = timeit.default_timer()
             pref_status = verify_prefix(prefix,path) # verify prefix send to blockchain
             print(str(pref_status))
             if pref_status is False:
+                t_identified = timeit.default_timer()
                 send_filter(prefix,hop,path)
+                t_neutralized = timeit.default_timer()
+                write_to_time(t_appear,t_identified,t_neutralized)
                 hijacker.append(prefix+';'+hop +';'+path) # catch the hijacker
 
         # check_filter(hijacker) #check filter availibility
@@ -66,6 +71,32 @@ def compare_rov(buffer_rov):
 
     except Exception as error:
         print(error)
+
+def write_to_time(t_appear, t_identified, t_neutralized):
+
+    two_up = Path().absolute().parent.parent.parent
+    keeper = two_up /'BRP/time_keeper.txt'
+    global last_line
+    last_line = ''
+    with open (keeper,'r') as keeper_file:
+        for last_line in keeper_file:
+            pass
+
+    t_prepend = float(last_line.lstrip(">>").rstrip("\n"))
+    print(t_prepend)
+    prepend_to_appear = t_appear - t_prepend
+    identification_time = t_identified - t_appear
+    neutralized_from_identified = t_neutralized - t_identified
+    neutralized_from_appear = t_neutralized - t_appear
+
+    with open(keeper,'a') as keeper_file:
+        keeper_file.write('This is : [prepend --> appear ] time  by '+str(asn)+'\n'+ '>'+ str(prepend_to_appear)+'\n')
+        keeper_file.write('This is : [appear --> identified]  as hijacker by '+str(asn)+'\n'+ '*>'+ str(identification_time)+'\n')
+        keeper_file.write('This is : [appear --> neutralized] time  by '+str(asn)+'\n'+ '**>'+ str(neutralized_from_appear)+'\n')
+        keeper_file.write('This is : [identified --> neutralized] time  by '+str(asn)+'\n'+ '***>'+ str(neutralized_from_identified)+'\n')
+        keeper_file.write('-----------------------------------------------------------\n')
+
+
 
 # def check_filter(hijacker):
 #     # sending filte if hijacker found
