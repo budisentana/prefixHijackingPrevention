@@ -1,0 +1,342 @@
+ 1/1: import json
+ 1/2: fin = json.load("420f1608e7298e74fcd4a8fded654d89.json")
+ 1/3: fin = json.load(open("420f1608e7298e74fcd4a8fded654d89.json").read())
+ 1/4: fin = json.load(open("420f1608e7298e74fcd4a8fded654d89.json"))
+ 1/5: fin
+ 1/6: fin.keys()
+ 1/7: fin['permissions']
+ 1/8: fin['security_score']
+ 1/9: fin['certificate_analysis']
+   1: fin = [x.strip() for x in open("monitor.log").readlines()]
+   2: fin
+   3: fin[8]
+   4: fin78]
+   5: fin[7]
+   6: routing_table = []
+   7: for item in fin"
+   8:
+for item in fin:
+    if item[0] == "*":
+        print (item)
+        routing_table.append(item)
+   9:
+for item in fin:
+    try::
+        if item[0] == "*":
+            print (item)
+            routing_table.append(item)
+    except:
+        pass
+  10:
+for item in fin:
+    try:
+        if item[0] == "*":
+            print (item)
+            routing_table.append(item)
+    except:
+        pass
+  11: routing_table
+  12: routing_table[0]
+  13: routing_table[0].split(" ")
+  14: routing_table[0]
+  15: routing_table[0].split("       ")
+  16: routing_table[0].split("         ")
+  17: routing_table[0].split("           ")
+  18: routing_table[0].split("            ")
+  19: routing_table[0].split("              ")
+  20: routing_table[0].split("                 ")
+  21: routing_table[0].split("                   ")
+  22: routing_table[0].split("                     ")
+  23: routing_table[0].split("                  ")
+  24: routing_table[0].split("                 ")
+  25: routing_table[0].split("               ")
+  26: routing_table[0].split("            ")
+  27: routing_table[0].split("\t")
+  28: routing_table[0].split(" ")
+  29: len(routing_table[0].split(" "))
+  30: len(routing_table[1].split(" "))
+  31: len(routing_table[1].split("  "))
+  32: len(routing_table[1].split("   "))
+  33: len(routing_table[1].split("    "))
+  34: len(routing_table[1].split("     "))
+  35: len(routing_table[1].split("      "))
+  36: routing_table[1].split("      ")
+  37: routing_table[1].split("       ")
+  38: routing_table[1].split("        ")
+  39: routing_table[1].split("         ")
+  40: routing_table[1].split("          ")
+  41: routing_table[0].split("          ")
+  42: len(routing_table[0].split("          "))
+  43: len(routing_table[1].split("          "))
+  44: routing_table[0].split("          ")
+  45: routing_table[0].split("          ")[0]
+  46: routing_table[0].split("          ")[0].split("      ")
+  47: routing_table[0].split("          ")[0].split("      ")[0]
+  48: routing_table[0].split("          ")[0].split("      ")[0].split("  )
+  49: routing_table[0].split("          ")[0].split("      ")[0].split("  ")
+  50: routing_table[0].split("          ")[0].split("      ")[0].split("  ")[0]
+  51: routing_table[0].split("          ")[0].split("      ")[0].split("  ")[1]
+  52: source = routing_table[0].split("          ")[0].split("      ")[0].split("  ")[1]
+  53: routing_table[0].split("          ")[0].split("      ")[1]
+  54: routing_table[0].split("          ")[0].split("      ")[1].strip()
+  55: distination = routing_table[0].split("          ")[0].split("      ")[1].strip()
+  56: distination = routing_table[0].split("          ")
+  57: distination = routing_table[0].split("          ")[0].split("      ")[1].strip()
+  58: routing_table[0].split("          ")
+  59: routing_table[0].split("          ")[-1]
+  60: routing_table[0].split("          ")[-1].strip()
+  61: routing_table[0].split("          ")[-1].strip().split(" ")
+  62: info = routing_table[0].split("          ")[-1].strip().split(" ")
+  63:
+for item in fin:
+    try:
+        if item[0] == "*":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = routing_table[0].split("          ")[0].split("      ")[1].strip()
+            info = routing_table[0].split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+    except:
+        pass
+  64:
+for item in fin:
+    try:
+        if item[0] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+    except:
+        pass
+  65:
+for item in fin:
+    try:
+        if item[0] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+    except:
+        pass
+  66:
+for item in fin:
+    #try:
+        if item[0] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  67:
+for item in fin:
+    #try:
+        if item[0:1] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  68:
+for item in fin:
+    #try:
+        if item[0:1] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  69: item
+  70:
+for item in fin:
+    item
+    #try:
+        if item[0:1] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  71:
+for item in fin:
+        item
+    #try:
+        if item[0:1] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  72:
+for item in fin:
+        print (item)
+    #try:
+        if item[0:1] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  73: item[0:1]
+  74: item[0:2]
+  75:
+for item in fin:
+        #print (item)
+    #try:
+        if item[0:2] == "* ":
+            print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  76:
+for item in fin:
+        #print (item)
+    #try:
+        if item[0:2] == "* ":
+            #print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+   # except:
+   #     pass
+  77: routing_table[1].split("        ")
+  78: routing_table[1].split("        ")[0]
+  79: routing_table[1].split("        ")[2]
+  80: source = " "
+  81: distination = routing_table[1].split("        ")[2].strip()
+  82: distination
+  83: routing_table[1].split("        ")[-1]
+  84: info = routing_table[1].split("        ")[-1].strip()
+  85: info
+  86:
+for item in fin:
+        #print (item)
+    #try:
+        if item[0:2] == "* ":
+            #print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print (source, distination, info)
+        elif item[0:2] == "*>":
+            source = " "
+            distination = item.split("        ")[2].strip()
+            info = item.split("        ")[-1].strip()
+            print (source, distination, info)
+   # except:
+   #     pass
+  87:
+for item in fin:
+        #print (item)
+    #try:
+        if item[0:2] == "* ":
+            #print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print(source, distination, info)
+        elif item[0:2] == "*>":
+            source = " "
+            distination = item.split("        ")[2].strip()
+            info = item.split("        ")[-1].strip()
+            print(source, distination, info)
+   # except:
+   #     pass
+  88:
+for item in fin:
+        #print (item)
+    #try:
+        if item[0:2] == "* ":
+            #print (item)
+            #routing_table.append(item)
+            source = item.split("          ")[0].split("      ")[0].split("  ")[1]
+            distination = item.split("          ")[0].split("      ")[1].strip()
+            info = item.split("          ")[-1].strip()#.split(" ")
+            print("%s::%s::%s" % (source, distination, info))
+        elif item[0:2] == "*>":
+            source = " "
+            distination = item.split("        ")[2].strip()
+            info = item.split("        ")[-1].strip()
+            print("%s::%s::%s" % (source, distination, info))
+   # except:
+   #     pass
+  89: sources = []
+  90: distinations_1 = []
+  91: sources_1 = []
+  92: info_1 = []
+  93: info_2 = []
+  94: sources_2 = []
+  95: distinations_2 = []
+  96:
+for item in fin:
+        #print (item)
+    #try:
+        if item[0:2] == "* ":
+            #print (item)
+            #routing_table.append(item)
+            sources_1.append(item.split("          ")[0].split("      ")[0].split("  ")[1])
+            distinations_1.append(item.split("          ")[0].split("      ")[1].strip())
+            info_1.append(item.split("          ")[-1].strip())#.split(" ")
+            #print("%s::%s::%s" % (source, distination, info))
+        elif item[0:2] == "*>":
+            sources_2.append(" ")
+            distinations_2.append(item.split("        ")[2].strip())
+            info_2.append(item.split("        ")[-1].strip())
+            #print("%s::%s::%s" % (source, distination, info))
+   # except:
+   #     pass
+  97: sources_1
+  98: sources_2
+  99:
+for x in range(len(sources_1)):
+    print (x)
+ 100:
+for x in range(len(sources_1)):
+    print (x, sources_1[x])
+ 101:
+for x in range(len(sources_1)):
+    print (x, sources_1[x], distinations_1[x])
+ 102:
+for x in range(len(sources_1)):
+    print (x, sources_1[x], distinations_1[x], info_1[x])
+ 103:
+for x in range(len(sources_1)):
+    print ("%s<-->%s :: %s" % (sources_1[x], distinations_1[x], info_1[x]))
+ 104:
+for x in range(len(sources_1)):
+    print ("%s-->%s :: %s" % (sources_1[x], distinations_1[x], info_1[x]))
+ 105:
+for x in range(len(sources_1)):
+    print ("%s-->%s :: %s" % (sources_1[x], distinations_1[x], info_1[x]))
+    print ("%s-->%s :: %s" % (sources_1[x], distinations_2[x], info_2[x]))
+ 106: %history -g -f 'from ikram.txt'

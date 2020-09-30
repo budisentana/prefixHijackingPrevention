@@ -14,14 +14,23 @@ def run_dispatcher():
     with open (capture_file,"r") as myfile:
         buffer_rov=[]
         buffer_roa=[]
+        buff_prefix=''
         for line in myfile:
             # prefix,path = map(str.strip,line.split(';'))
             if ';' in line:
-                prefix,hop,path = map(str.strip,line.split(';'))
-                # print(prefix+hop+path)
-                if hop not in ['0.0.0.0','0'] and prefix:
+                route,prefix,hop,path = map(str.strip,line.split(';'))
+                if buff_prefix != prefix and hop not in ['0']:
+                    buff_prefix = prefix
+                    # print(buff_prefix+hop+path)
+                if route in ['*>'] and hop in ['0'] :
+                    hop = prefix
+                    prefix = buff_prefix
                     as_origin = path
-                    # print('prefix :'+str(prefix)+ ' is the originate by  : '+str(as_origin))
+                    # print('1. prefix :'+str(prefix)+ ' is the originate by  : '+str(as_origin))
+                    buffer_rov.append(prefix+';'+hop+';'+as_origin)
+                elif route in ['*>'] and hop not in ['0.0.0.0','0'] :
+                    as_origin = path
+                    # print('2. prefix :'+str(prefix)+ ' is the originate by  : '+str(as_origin))
                     buffer_rov.append(prefix+';'+hop+';'+as_origin)
                 elif hop in ['0.0.0.0']:
                     # print(str(prefix)+' is internal prefix')

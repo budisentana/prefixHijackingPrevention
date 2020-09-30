@@ -147,8 +147,8 @@ app.post('/api/addpref/', async function (req, res) {
 
     } catch (error) {
         console.error(`Failed to submit transaction`);
-        res.status(500).json({error})
+        res.status(500).json({error});
     }
-})
+});
 
 app.listen(8091);

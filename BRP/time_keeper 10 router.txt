@@ -1,0 +1,333 @@
+This is prepend time  by 9
+>>1724837.811577725
+This is : [prepend --> appear ] time  from 192.9.9.9
+>15.62815103889443
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.08479864313267171
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.09474291303195059
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.00994426989927888
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1724853.534471677
+This is : [prepend --> appear ] time  from 192.9.5.5
+>26.149081311188638
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.07986508682370186
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.08764581591822207
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.007780729094520211
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1724879.771198804
+This is : [prepend --> appear ] time  from 192.9.8.8
+>2.066142749041319
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.07213432900607586
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.08253572299145162
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.010401393985375762
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1725177.59408624
+This is : [prepend --> appear ] time  from 192.9.5.5
+>7.665091940900311
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.08537218207493424
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.09385868208482862
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.008486500009894371
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1725185.353036863
+This is : [prepend --> appear ] time  from 192.9.8.8
+>4.082227648934349
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.11206448404118419
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.12085390114225447
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.008789417101070285
+-----------------------------------------------------------
+This is next attack from 192.9.9.9
+1725189.556118413
+This is : [prepend --> appear ] time  from 192.9.9.9
+>8.088698139879853
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.06839174800552428
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.07658199709840119
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.008190249092876911
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1725303.503269713
+This is : [prepend --> appear ] time  from 192.9.9.9
+>18.853905636118725
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.08690127707086504
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.09576704096980393
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.008865763898938894
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1725322.45294239
+This is : [prepend --> appear ] time  from 192.9.5.5
+>16.10193014703691
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.09661487187258899
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.10682558896951377
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.010210717096924782
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1725338.661698126
+This is : [prepend --> appear ] time  from 192.9.8.8
+>5.119755489984527
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.07153107202611864
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.08095623110421002
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.009425159078091383
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1725639.658865144
+This is : [prepend --> appear ] time  from 192.9.9.9
+>20.307204444892704
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.08488266402855515
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.09411315899342299
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.00923049496486783
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1725660.060182748
+This is : [prepend --> appear ] time  from 192.9.5.5
+>14.127935050055385
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.08208000008016825
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.08987194811925292
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.007791948039084673
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1725675.361974341
+This is : [prepend --> appear ] time  from 192.9.8.8
+>9.08573124394752
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.0702386109624058
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.07807491300627589
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.007836302043870091
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1725726.022804966
+This is : [prepend --> appear ] time  from 192.9.9.9
+>28.803714694920927
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.07613927405327559
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.08477944415062666
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.008640170097351074
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1725754.911299105
+This is : [prepend --> appear ] time  from 192.9.5.5
+>14.097552150022238
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.07698427699506283
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.08580577885732055
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.008821501862257719
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1725769.094657034
+This is : [prepend --> appear ] time  from 192.9.8.8
+>10.098100310191512
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.06729055079631507
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.0755057348869741
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.008215184090659022
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1736679.675024579
+This is : [prepend --> appear ] time  from 192.9.9.9
+>30.003341048024595
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.08397331088781357
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.09221454686485231
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.008241235977038741
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1736709.770580174
+This is : [prepend --> appear ] time  from 192.9.5.5
+>15.106940855039284
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.11470278399065137
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.12461471906863153
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.00991193507798016
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1736725.002135748
+This is : [prepend --> appear ] time  from 192.9.8.8
+>10.087196878856048
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.09591022203676403
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.11890032608062029
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.022990104043856263
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1737165.380225329
+This is : [prepend --> appear ] time  from 192.9.9.9
+>30.054919624933973
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.11760955699719489
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.12587787001393735
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.008268313016742468
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1737195.561022824
+This is : [prepend --> appear ] time  from 192.9.5.5
+>14.110759009141475
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.07991213398054242
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.08998561603948474
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.010073482058942318
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1737209.761767449
+This is : [prepend --> appear ] time  from 192.9.8.8
+>1.0019005029462278
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.08516017603687942
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.09294634195975959
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.007786165922880173
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1737306.405197907
+This is : [prepend --> appear ] time  from 192.9.9.9
+>12.710996137931943
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.07473831996321678
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.08458728902041912
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.00984896905720234
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+1737319.200781334
+This is : [prepend --> appear ] time  from 192.9.5.5
+>44.1610063361004
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.09826785186305642
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.10590118984691799
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.007633337983861566
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1737363.46768886
+This is : [prepend --> appear ] time  from 192.9.8.8
+>1.0026001890655607
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.06911764806136489
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.07724455394782126
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.00812690588645637
+-----------------------------------------------------------
+This is prepend time  by 9
+>>1737411.122052831
+This is : [prepend --> appear ] time  from 192.9.5.5
+>16.619374688947573
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.08924077893607318
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.09898428083397448
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.009743501897901297
+-----------------------------------------------------------
+This is next attack from 192.9.8.8
+1737427.840411801
+This is : [prepend --> appear ] time  from 192.9.8.8
+>1.0022019571624696
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.07974530197679996
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.08978236303664744
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.010037061059847474
+-----------------------------------------------------------
+This is next attack from 192.9.9.9
+1737428.932396121
+This is : [prepend --> appear ] time  from 192.9.9.9
+>14.09642653586343
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.10719928098842502
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.11543436301872134
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.008235082030296326
+-----------------------------------------------------------
+This is prepend time  by 9
+>>395908.200558025
+This is prepend time  by 9
+>>396202.815993829
+This is prepend time  by 9
+>>397596.368801964
+This is : [prepend --> appear ] time  from 192.9.9.9
+>27.287325218028855
+This is : [appear --> identified]  as hijacker from 192.9.9.9
+*>0.07236794399796054
+This is : [appear --> neutralized] time  from 192.9.9.9
+**>0.08144295500824228
+This is : [identified --> neutralized] time  from 192.9.9.9
+***>0.009075011010281742
+-----------------------------------------------------------
+397624.83732496
+This is : [prepend --> appear ] time  from 192.9.8.8
+>1.0033359000226483
+This is : [appear --> identified]  as hijacker from 192.9.8.8
+*>0.08913277700776234
+This is : [appear --> neutralized] time  from 192.9.8.8
+**>0.09788279799977317
+This is : [identified --> neutralized] time  from 192.9.8.8
+***>0.008750020992010832
+-----------------------------------------------------------
+This is next attack from 192.9.5.5
+397625.938543658
+This is : [prepend --> appear ] time  from 192.9.5.5
+>30.050162339990493
+This is : [appear --> identified]  as hijacker from 192.9.5.5
+*>0.09189650701591745
+This is : [appear --> neutralized] time  from 192.9.5.5
+**>0.10025584400864318
+This is : [identified --> neutralized] time  from 192.9.5.5
+***>0.00835933699272573
+-----------------------------------------------------------

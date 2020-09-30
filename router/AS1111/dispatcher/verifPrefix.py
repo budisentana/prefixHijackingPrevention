@@ -2,6 +2,7 @@ import requests
 import json
 import timeit
 import os
+from pathlib import Path
 
 def check_config():
     try:
@@ -50,11 +51,16 @@ def compare_rov(buffer_rov):
         diff = set(buff).difference(loc)           
         # print('this is second different'+str(diff))
         for line in diff:
+            global hop
             prefix,hop,path = map(str.strip,line.split(';'))
+            t_appear = timeit.default_timer()
             pref_status = verify_prefix(prefix,path) # verify prefix send to blockchain
             print(str(pref_status))
             if pref_status is False:
+                t_identified = timeit.default_timer()
                 send_filter(prefix,hop,path)
+                t_neutralized = timeit.default_timer()
+                write_to_time(t_appear,t_identified,t_neutralized)
                 hijacker.append(prefix+';'+hop +';'+path) # catch the hijacker
 
         # check_filter(hijacker) #check filter availibility
@@ -66,6 +72,55 @@ def compare_rov(buffer_rov):
 
     except Exception as error:
         print(error)
+
+def write_to_time(t_appear, t_identified, t_neutralized):
+
+    two_up = Path().absolute().parent.parent.parent
+    keeper = two_up /'BRP/time_keeper.txt'
+    global last_line
+    last_line = ''
+    t_prepend = ''
+    with open (keeper,'r') as keeper_file:
+        for num,last_line in enumerate(keeper_file):
+            pass           
+        line_p = [num-9]
+        line_a = [num-7]
+        line_n = [num-3]
+
+    if '>>' in last_line:
+        print('test')
+        t_prepend = float(last_line.lstrip(">>").rstrip("\n"))
+    else:
+        with open(keeper) as keeper_file :
+            for nums, line in enumerate(keeper_file):
+                if nums in line_p :
+                    prepend_time = line
+                    old_prepend = float(prepend_time.lstrip(">>").rstrip("\n"))
+                if nums in line_n :
+                    neutral_time = line
+                    old_neutral = float(neutral_time.lstrip("**>").rstrip("\n"))
+                if nums in line_a :
+                    appear_time = line
+                    old_appear = float(appear_time.lstrip(">").rstrip("\n"))
+            t_prepend = old_prepend + old_neutral+old_appear
+        with open(keeper,'a') as keeper_file :
+            keeper_file.write('This is next attack from '+str(hop)+'\n'+str(t_prepend)+'\n')
+
+    
+    print(t_prepend)
+    prepend_to_appear = t_appear - t_prepend
+    identification_time = t_identified - t_appear
+    neutralized_from_identified = t_neutralized - t_identified
+    neutralized_from_appear = t_neutralized - t_appear
+
+    with open(keeper,'a') as keeper_file:
+        keeper_file.write('This is : [prepend --> appear ] time  from '+str(hop)+'\n'+ '>'+ str(prepend_to_appear)+'\n')
+        keeper_file.write('This is : [appear --> identified]  as hijacker from '+str(hop)+'\n'+ '*>'+ str(identification_time)+'\n')
+        keeper_file.write('This is : [appear --> neutralized] time  from '+str(hop)+'\n'+ '**>'+ str(neutralized_from_appear)+'\n')
+        keeper_file.write('This is : [identified --> neutralized] time  from '+str(hop)+'\n'+ '***>'+ str(neutralized_from_identified)+'\n')
+        keeper_file.write('-----------------------------------------------------------\n')
+
+
 
 # def check_filter(hijacker):
 #     # sending filte if hijacker found
@@ -106,4 +161,5 @@ asn = ''
 bgp_port = ''
 password = ''
 router_ip = ''
+hop = ''
 dirname = os.getcwd()
