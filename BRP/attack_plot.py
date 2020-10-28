@@ -12,16 +12,16 @@ with open(dirname,'r') as time_file:
     for line in time_file:
         if 'prepend --> appear' in line:
             next_line = next(time_file)
-            t1.append(round(float(next_line.lstrip('>').rstrip('\n'))/100,2))
+            t1.append(round(float(next_line.lstrip('>').rstrip('\n'))/100,3))
         elif 'appear --> identified' in line:
             next_line = next(time_file)
-            t2.append(round(float(next_line.lstrip('*>').rstrip('\n')),2))
+            t2.append(round(float(next_line.lstrip('*>').rstrip('\n')),3))
         elif 'appear --> neutralized' in line:
             next_line = next(time_file)
-            t3.append(round(float(next_line.lstrip('**>').rstrip('\n')),2))
+            t3.append(round(float(next_line.lstrip('**>').rstrip('\n')),3))
         elif 'identified --> neutralized' in line:
             next_line = next(time_file)
-            t4.append(round(float(next_line.lstrip('***>').rstrip('\n')),2))
+            t4.append(round(float(next_line.lstrip('***>').rstrip('\n')),3))
             
 print(str(t1)+'\n')
 print(str(t2)+'\n')
@@ -29,18 +29,18 @@ print(str(t3)+'\n')
 print(str(t4)+'\n')
 
 
-index = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'X8', 'X9', 'X10']
+# index = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'X8', 'X9', 'X10']
          
-df = pd.DataFrame({'prepend_appear (/100)': t1,
-                   'appear_identified': t2,
-                   'appear_neutralized': t3, 
-                   'identified_neutralized': t4}, index=index)
-ax = df.plot.bar(rot=0)
-ax.set_xlabel('Running #')
-ax.set_ylabel('Time (second)')
-ax.set_title('Blockjack Time using 4 Router')
+# df = pd.DataFrame({'prepend_appear (/100)': t1,
+#                    'appear_identified': t2,
+#                    'appear_neutralized': t3, 
+#                    'identified_neutralized': t4}, index=index)
+# ax = df.plot.bar(rot=0)
+# ax.set_xlabel('Running #')
+# ax.set_ylabel('Time (second)')
+# ax.set_title('Blockjack Time using 4 Router')
 
-plt.show()
+# plt.show()
 
 
 index2 = ['Prepending', 'Identifying', 'Neutralizing(1)', 'Neutralizing(2)']
@@ -80,3 +80,5 @@ with open(sumary_data,'a') as sum_data:
     sum_data.write('T1  & T2  & T3  & T4\\\ \n')
     for i,line in enumerate(t1) :
         sum_data.write(str(t1[i])+ ' & '+ str(t2[i])+ ' & '+ str(t3[i])+ ' & '+ str(t4[i])+ '\\\ \n')
+
+
