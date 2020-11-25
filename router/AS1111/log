@@ -31616,3 +31616,37 @@
 2020/11/24 02:44:50 BGP: %ADJCHANGE: neighbor 192.9.2.2 Up
 2020/11/24 02:44:51 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
 2020/11/24 02:45:21 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 09:33:50 BGP: Cannot bind path /var/run/bgpd.vty: Permission denied
+2020/11/24 09:33:50 BGP: BGPd 1.1.0 starting: vty@2605, bgp@<all>:179 pid 6
+2020/11/24 09:33:50 BGP: zclient_socket_un connect failure: 2
+2020/11/24 09:33:51 BGP: zclient_socket_un connect failure: 2
+2020/11/24 09:33:52 BGP: zclient_socket_un connect failure: 2
+2020/11/24 09:33:53 BGP: zclient_socket_un connect failure: 2
+2020/11/24 09:33:54 BGP: zclient_socket_un connect failure: 2
+2020/11/24 09:33:55 BGP: zclient_socket_un connect failure: 2
+2020/11/24 09:33:55 BGP: SLOW THREAD: task zclient_connect (7f6e72ad961e) ran for 5001ms (cpu time 1ms)
+2020/11/24 09:33:55 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 09:33:56 BGP: %NOTIFICATION: received from neighbor 192.9.2.2 6/7 (Cease/Connection collision resolution) 0 bytes 
+2020/11/24 09:33:56 BGP: %NOTIFICATION: sent to neighbor 192.9.2.2 6/5 (Cease/Connection Rejected) 0 bytes 
+2020/11/24 09:33:56 BGP: Notification sent to neighbor 192.9.2.2: type 6/5
+2020/11/24 09:33:59 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 09:33:59 BGP: %ADJCHANGE: neighbor 192.9.2.2 Up
+2020/11/24 09:34:00 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 18:02:30 BGP: Cannot bind path /var/run/bgpd.vty: Permission denied
+2020/11/24 18:02:30 BGP: BGPd 1.1.0 starting: vty@2605, bgp@<all>:179 pid 6
+2020/11/24 18:02:30 BGP: zclient_socket_un connect failure: 2
+2020/11/24 18:02:31 BGP: zclient_socket_un connect failure: 2
+2020/11/24 18:02:32 BGP: zclient_socket_un connect failure: 2
+2020/11/24 18:02:33 BGP: zclient_socket_un connect failure: 2
+2020/11/24 18:02:34 BGP: zclient_socket_un connect failure: 2
+2020/11/24 18:02:35 BGP: zclient_socket_un connect failure: 2
+2020/11/24 18:02:35 BGP: SLOW THREAD: task zclient_connect (7f210140461e) ran for 5001ms (cpu time 0ms)
+2020/11/24 18:02:35 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 18:02:35 BGP: %NOTIFICATION: received from neighbor 192.9.2.2 6/7 (Cease/Connection collision resolution) 0 bytes 
+2020/11/24 18:02:35 BGP: %NOTIFICATION: sent to neighbor 192.9.2.2 6/5 (Cease/Connection Rejected) 0 bytes 
+2020/11/24 18:02:35 BGP: Notification sent to neighbor 192.9.2.2: type 6/5
+2020/11/24 18:02:37 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 18:02:37 BGP: %ADJCHANGE: neighbor 192.9.2.2 Up
+2020/11/24 18:02:38 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 18:03:08 BGP: sendmsg_nexthop: Can't send NH register, Zebra client not established
+2020/11/24 18:03:35 BGP: zclient_socket_un connect failure: 2
