@@ -1,6 +1,6 @@
 !
 ! Zebra configuration saved from vty
-!   2020/11/25 01:49:52
+!   2020/11/27 03:31:16
 !
 hostname router3
 password test
@@ -11,13 +11,10 @@ bgp config-type cisco
 !
 router bgp 3
  no synchronization
- bgp router-id 99.189.34.122
- neighbor 99.50.7.208 remote-as 9
- neighbor 99.73.75.64 remote-as 7
- neighbor 99.122.62.45 remote-as 5
- neighbor 99.194.226.199 remote-as 10
- neighbor 99.197.175.95 remote-as 8
- neighbor 99.215.151.41 remote-as 2
+ bgp router-id 99.75.242.228
+ neighbor 99.54.41.190 remote-as 10
+ neighbor 99.86.136.230 remote-as 5
+ neighbor 99.233.125.8 remote-as 2
  no auto-summary
 !
  address-family ipv6

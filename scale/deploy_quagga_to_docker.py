@@ -2,6 +2,7 @@ import plotly.graph_objects as go
 import networkx as nx
 import random
 import os
+import time
 
 print('Creating Docker container Network ')
 docker_net = 'docker network create --subnet=99.0.0.0/8 blockjack-bgp-net'
@@ -27,12 +28,19 @@ with open('node_setup.txt','r') as node_conf:
         print(docker_run)
         os.system(docker_run)
 
+print('Sleep 5 second before configure router')
+time.sleep(5)
+with open('node_setup.txt','r') as node_conf:
+    for node in node_conf:
+        host_name,host_ip,router_name,as_name = map(str.strip,node.split(';'))
         print('Configure routername, BGP ASN, BGP ID for '+str(router_name))
         as_no = as_name.lstrip('AS').rstrip('\n')
         print(as_no)
         shell_path = os.getcwd()+'/conf_node.sh '
         os.system(shell_path + host_ip + ' '+router_name+ ' '+as_no)
 
+print('Sleep 5 second before configure BGP Peer')
+time.sleep(5)
 with open('peer_setup.txt','r') as peer_conf:
     for peer in peer_conf:
         peer_x, ip_x, peer_y, ip_y = map(str.strip,peer.split(';'))
