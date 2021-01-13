@@ -1,0 +1,8 @@
+{
+"server":"http://localhost:8093",
+"port":"8093",
+"router_ip":" 192.9.6.6 ",
+"asn":" 6 ",
+"bgp_port":" 2605 ",
+"password":" test "
+}

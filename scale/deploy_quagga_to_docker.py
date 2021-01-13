@@ -30,6 +30,8 @@ with open('node_setup.txt','r') as node_conf:
 
 print('Sleep 5 second before configure router')
 time.sleep(5)
+
+router_list=[]
 with open('node_setup.txt','r') as node_conf:
     for node in node_conf:
         host_name,host_ip,router_name,as_name = map(str.strip,node.split(';'))
@@ -38,6 +40,7 @@ with open('node_setup.txt','r') as node_conf:
         print(as_no)
         shell_path = os.getcwd()+'/conf_node.sh '
         os.system(shell_path + host_ip + ' '+router_name+ ' '+as_no)
+        router_list.append(host_ip+';'+as_no)
 
 print('Sleep 5 second before configure BGP Peer')
 time.sleep(5)
@@ -51,5 +54,33 @@ with open('peer_setup.txt','r') as peer_conf:
         print('Peering AS '+peer_y+ ' with AS  '+peer_x)
         os.system(shell_path + ' '+ ip_y + ' '+peer_y + ' '+ip_x+ ' '+peer_x)
 
+print('Sleep 5 second Creating Random IP Prefix to announce by router')
+time.sleep(5)
 
+prefix_list =[]
+print('Creating random IP Prefix to announce by router')
+while len(prefix_list) < len(router_list):
+    x1 = random.randint(0,255)
+    x2 = random.randint(0,255)
+    x3 = random.randint(0,255)        
+    x4 = 0
+    result = ".".join(map(str,([x1,x2,x3,x4])))
+    if result not in prefix_list:    
+        prefix_list.append(result+'/24')
+
+print('Writing the IP Prefix and owner to the file ')
+with open('prefix_list.txt','w') as prefix_seed:      
+    for i,router in enumerate(router_list):
+        prefix_seed.write(router.strip('\n')+';'+prefix_list[i]+'\n')
+
+print('Sleep 5 second before announce IP Prefix  by each router')
+time.sleep(5)
+print(prefix_list)
+with open('prefix_list.txt','r') as prefix_list:
+    for prefix in prefix_list:
+        router_ip, asn, prefix = map(str.strip,prefix.split(';'))
+
+        print('Announcing '+prefix+ ' by router  '+router_ip)
+        shell_path = os.getcwd()+'/prefix_announcement.sh'
+        os.system(shell_path + ' '+ router_ip +' '+asn + ' '+prefix)
 
