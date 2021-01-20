@@ -57,9 +57,10 @@ with open('peer_setup.txt','r') as peer_conf:
 print('Sleep 5 second Creating Random IP Prefix to announce by router')
 time.sleep(5)
 
+number_of_prefix = round(len(router_list)/4)
 prefix_list =[]
 print('Creating random IP Prefix to announce by router')
-while len(prefix_list) < len(router_list):
+while len(prefix_list) < number_of_prefix:
     x1 = random.randint(0,255)
     x2 = random.randint(0,255)
     x3 = random.randint(0,255)        
@@ -70,8 +71,9 @@ while len(prefix_list) < len(router_list):
 
 print('Writing the IP Prefix and owner to the file ')
 with open('prefix_list.txt','w') as prefix_seed:      
-    for i,router in enumerate(router_list):
-        prefix_seed.write(router.strip('\n')+';'+prefix_list[i]+'\n')
+    for i,line in enumerate(prefix_list):
+        router_line = router_list[i]
+        prefix_seed.write(router_line.strip('\n')+';'+prefix_list[i]+'\n')
 
 print('Sleep 5 second before announce IP Prefix  by each router')
 time.sleep(5)
