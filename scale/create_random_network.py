@@ -110,7 +110,7 @@ node_trace.text = node_text
 
 fig = go.Figure(data=[edge_trace, node_trace],
              layout=go.Layout(
-                title='<br>Blockjack Network graph',
+                title='<br>Blockjack Network graph (20 routers ; Connectivity level 50%)',
                 titlefont_size=16,
                 showlegend=False,
                 hovermode='closest',

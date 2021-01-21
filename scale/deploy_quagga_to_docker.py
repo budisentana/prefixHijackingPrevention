@@ -85,4 +85,3 @@ with open('prefix_list.txt','r') as prefix_list:
         print('Announcing '+prefix+ ' by router  '+router_ip)
         shell_path = os.getcwd()+'/prefix_announcement.sh'
         os.system(shell_path + ' '+ router_ip +' '+asn + ' '+prefix)
-
