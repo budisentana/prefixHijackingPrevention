@@ -1,0 +1,76 @@
+/home/budi/prefixHijackingPrevention/scale/running_result/20_router/time_note.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 3 & 10 & 14.579 & 0.145\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/20_router/time_note2.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 2 & 16.281 & 0.154\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/20_router/time_note3.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 34 & 1.722 & 0.143\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/20_router/time_note4.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 3 & 7 & 12.648 & 0.143\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/20_router/time_note5.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 2 & 11.996 & 0.143\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/30_router/time_note.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 18 & 3.592 & 0.142\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/30_router/time_note2.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 5 & 29.1 & 0.141\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/30_router/time_note3.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 41 & 50.226 & 0.142\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/30_router/time_note4.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 2 & 21.978 & 0.155\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/30_router/time_note5.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 8 & 19.573 & 0.144\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/40_router/time_note.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 4 & 18.676 & 0.143\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/40_router/time_note2.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 12 & 6.003 & 0.144\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/40_router/time_note3.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 3 & 28.012 & 0.489\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/40_router/time_note4.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 9 & 14.666 & 0.143\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/40_router/time_note5.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 3 & 28.298 & 0.15\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/50_router/time_note.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 12 & 29.767 & 0.141\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/50_router/time_note2.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 9 & 16.514 & 0.145\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/50_router/time_note3.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 9 & 5.344 & 0.14\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/50_router/time_note4.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 26 & 5.634 & 0.138\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/50_router/time_note5.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 6 & 12.534 & 0.14\\ 
+
+/home/budi/prefixHijackingPrevention/scale/running_result/60_router/time_note.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 1 & 57.407 & 0.148\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/60_router/time_note2.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 10 & 10.321 & 0.429\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/60_router/time_note3.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 3 & 9 & 27.299 & 1.025\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/60_router/time_note4.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 2 & 5 & 17.578 & 0.309\\ 
+/home/budi/prefixHijackingPrevention/scale/running_result/60_router/time_note5.txt
+Prefix Sent  & Prefix Received & Attack Received & avg Prepending & Avg Neutralization \\ 
+>5 & 1 & 5 & 11.039 & 0.142\\ 

@@ -48,15 +48,15 @@ def create_pairs(list_tree):
         R = (R.lstrip('R:').rstrip(')'))
         print(D,L,R)
         if (L and R) not in ('None'):
-            pairs.append('('+str(D)+','+str(L)+')')
-            pairs.append('('+str(D)+','+str(R)+')')
+            pairs.append('('+str(D)+';'+str(L)+')')
+            pairs.append('('+str(D)+';'+str(R)+')')
         elif R in ('None') and L not in ('None'):
-            pairs.append('('+str(D)+','+str(L)+')')
+            pairs.append('('+str(D)+';'+str(L)+')')
 
     print(str(pairs))
 
 def main():
-    data = range(1,100)
+    data = range(1,20)
     list_tree = build_tree_breadth_first(data)
     create_pairs(list_tree)
     # print ('Root is:', root)
