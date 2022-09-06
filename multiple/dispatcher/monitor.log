@@ -1,0 +1,14 @@
+show ip bgp
+BGP table version is 0, local router ID is 192.9.6.6
+Status codes: s suppressed, d damped, h history, * valid, > best, = multipath,
+              i internal, r RIB-failure, S Stale, R Removed
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.11.11.0      192.9.3.3                              0 3333 2222 1111 i
+*> 192.11.12.0      192.9.3.3                              0 3333 2222 1111 i
+*> 192.22.22.0      192.9.3.3                              0 3333 2222 i
+*> 192.33.33.0      192.9.3.3                0              0 3333 i
+
+Displayed  4 out of 4 total prefixes
+router6# 

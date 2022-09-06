@@ -1,0 +1,10 @@
+host1;99.132.1.42;router1;AS1
+host2;99.158.234.140;router2;AS2
+host3;99.152.163.122;router3;AS3
+host4;99.152.79.114;router4;AS4
+host5;99.97.124.124;router5;AS5
+host6;99.211.142.139;router6;AS6
+host7;99.18.181.255;router7;AS7
+host8;99.122.62.98;router8;AS8
+host9;99.123.186.161;router9;AS9
+host10;99.213.250.87;router10;AS10

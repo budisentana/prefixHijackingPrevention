@@ -76,7 +76,7 @@ def compare_rov(buffer_rov):
 
 def write_record(prefix,path,prepend,identified):
     two_up = Path().absolute().parent.parent.parent
-    keeper = two_up /'scale/time_note.txt'
+    keeper = two_up /'single/time_note.txt'
     with open(keeper,'a') as note_time:
         note_time.write(str(path)+';'+prefix+';P;'+str(prepend)+'\n')
         note_time.write(str(path)+';'+prefix+';N;'+str(identified)+'\n')

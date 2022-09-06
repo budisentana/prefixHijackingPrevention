@@ -4,8 +4,8 @@ import numpy as np
 def Average(lst): 
     return sum(lst) / len(lst) # find average of each element neutralization
 
-sum_path = '/home/budi/prefixHijackingPrevention/scale/running_result/time_summary.txt'
-dirname = '/home/budi/prefixHijackingPrevention/scale/running_result/60_router/time_note5.txt'
+sum_path = '/home/budi/prefixHijackingPrevention/scale/running_result/test.txt'
+dirname = '/home/budi/prefixHijackingPrevention/scale/running_result/30_router/time_note5.txt'
 
 
 # for root,dirs,files in os.walk(dirname):
@@ -27,7 +27,7 @@ with open (dirname,'r') as time_file:
         prefix_list.append(asn+';'+prefix+';'+time)
 
 
-print(iter)
+# print(iter)
 """ Find the time list based on the prefixes
     grouped it into prepend and neutralization array
 """
@@ -46,12 +46,16 @@ for i, item in enumerate(prefix_list):
                 if c_asn in h_asn and c_prefix in h_prefix  and c_stat in 'P':
                     hijacked_p.append(float(c_time))
                     hijacked_n.append(float(c_time))
+                    # print(c_asn + ' :::'+c_time)
                     hijack_num+=1
                 if c_asn in h_asn and c_prefix in h_prefix  and c_stat in 'N':
                     hijacked_n.append(float(c_time))
                 
-    hijacked.append(hijacked_p)
-    neutral_list.append(hijacked_n)
+    if len(hijacked_p)>1:
+        hijacked.append(hijacked_p) # remove the time that only appear in Start time
+    if len (hijacked_n)>1:
+        neutral_list.append(hijacked_n)
+# print(neutral_list)
 
 """
     Summarized prepend time
@@ -59,27 +63,30 @@ for i, item in enumerate(prefix_list):
 """
 diff_list = []
 avg_list = []
+# std_list=[]
 for z, item in enumerate(hijacked):
     avg = 0
     item_dif=[]
     for y in item :
-        item_dif.append(float(y))
-
-    if len(item_dif) > 1:
-        xitem = np.diff(item_dif)
-        avg = Average(xitem)
-        avg_list.append(avg)    
-    else:
-        xitem = 0
-    diff_list.append(xitem)
-
-# for line in diff_list:
-#     print(line)
-
+        item_dif.append(float(y)) # need it to create float value for each item in the list
+    
+    # if len (item_dif)>1:
+    prep_time_per_item = np.diff(item_dif)
+    # print(prep_time_per_item)
+    avg = Average(prep_time_per_item)
+    avg_list.append(avg) # append the average prepend on each item (same prefix same asn with different path attack)    
+    # std_per_item = np.std(prep_time_per_item)
+    # if std_per_item !=0:
+    # std_list.append(std_per_item)
+    # print(std_per_item)
+    
+# print(std_list)
 # print(avg_list)
 
 prepend_avg = round(Average(avg_list),3)
+# prepend_std = round(Average(std_list),3)
 # print(prepend_avg)
+# print(prepend_std)
 
 """ Summarize Neutralization time
     Substract the pair (Prepend:Neutralization) of element in the list 
